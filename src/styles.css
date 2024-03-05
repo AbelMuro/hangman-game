@@ -1,0 +1,23 @@
+@font-face {
+    font-family: 'mouse memoirs';
+    src: url('/public/fonts/MouseMemoirs-Regular.ttf');
+}
+
+:root{
+    --font: 'mouse memoirs';
+}
+
+* {
+    box-sizing: border-box;
+    transition: all 0.2s linear;
+}
+
+body{
+    margin: 0px;
+    padding: 0px;
+    min-height: 100vh;
+    background-image: url('/public/images/background-desktop.svg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
