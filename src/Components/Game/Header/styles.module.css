@@ -67,6 +67,9 @@
     background-color: var(--Dark-Navy, #261676);
 }
 
+.header_health::-webkit-progress-bar{
+    background-color: transparent;
+}
 
 .header_heart{
     width: 53.333px;
