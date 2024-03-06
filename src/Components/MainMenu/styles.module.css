@@ -11,7 +11,7 @@
     padding-top: 129px;
     border-radius: 72px;
     background: linear-gradient(180deg, #344ABA 0%, rgba(0, 20, 121, 0.83) 100%);
-    box-shadow: 0px 6px 0px 8px #2463FF inset, 0px -8px 0px 4px #140E66 inset;
+    box-shadow: 0px -8px 0px 4px #140E66 inset, 0px 6px 0px 8px #2463FF inset;
 }
 
 .menu_logo{
@@ -30,17 +30,15 @@
     height: 200px;
     padding: 0px;
     margin: 0px;
-    border-top: 1px solid rgb(41, 41, 41);
-    border-left: 5px solid rgb(41, 41, 41);
-    border-right: 5px solid rgb(41, 41, 41);
-    border-bottom: 10px solid  rgb(41, 41, 41);
+    border: none;
     border-radius: 999px;
     background: linear-gradient(180deg, #FE71FE 16.42%, #7199FF 100%);
-    box-shadow: 0px -12px 0px 11px #9D2DF5 inset, 0px -4px 0px 5px #243041 inset;
+    box-shadow: 0px -4px 0px 5px #243041 inset, 0px -12px 0px 11px #9D2DF5 inset;
     cursor: pointer;
 }
 
 .menu_play > img {
+    pointer-events: none;
     width: 66.04px;
     height: 62.26px;
 }
@@ -52,10 +50,7 @@
 .menu_instructions{
     width: 260px;
     height: 62px;
-    border-top: 1px solid #00164f;
-    border-left: 3px solid #00164f;
-    border-right: 3px solid #00164f;
-    border-bottom: 7px solid  #00164f;
+    border: none;
     cursor: pointer;
     color: var(--White, #FFF);
     text-align: center;
@@ -68,7 +63,7 @@
     text-transform: uppercase;
     border-radius: 40px;
     background: var(--Blue, #2463FF);
-    box-shadow: 0px 1px 0px 6px #3C74FF inset, 0px -2px 0px 3px #140E66 inset;
+    box-shadow: 0px -2px 0px 3px #140E66 inset, 0px 1px 0px 6px #3C74FF inset;
 }
 
 .menu_instructions:hover{
@@ -81,7 +76,6 @@
         height: 481px;
         border-radius: 48px;
         background: linear-gradient(180deg, #344ABA 0%, rgba(0, 20, 121, 0.83) 100%);
-        box-shadow: 0px 6px 0px 8px #2463FF inset, 0px -8px 0px 4px #140E66 inset;
     }
     
     .menu_logo{

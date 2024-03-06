@@ -1,12 +1,19 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import styles from './styles.module.css';
-import icons from './icons';
+import icons from '~/Common/icons';
 
 function Instructions() {
+    const navigate = useNavigate();
+
+    const handleGoBack = () => {
+        navigate('/');
+    }
+
     return(
         <main className={styles.overlay}>
             <section className={styles.instructions}>
-                <button className={styles.instructions_back}>
+                <button className={styles.instructions_back} onClick={handleGoBack}>
                     <img src={icons['back']}/>
                 </button>
                 <h1 className={styles.instructions_title}>

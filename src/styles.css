@@ -20,4 +20,17 @@ body{
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    transition: none;
+}
+
+@media(max-width: 860px){
+    body{
+        background-image: url('/public/images/background-tablet.svg');
+    }
+}
+
+@media(max-width: 620px){
+    body{
+        background-image: url('/public/images/background-mobile.svg')
+    }
 }

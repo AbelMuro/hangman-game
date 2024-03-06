@@ -14,7 +14,7 @@ function MainMenu() {
     return(
         <main className={styles.menu}>
             <img className={styles.menu_logo} src={icons['logo']}/>
-            <button className={styles.menu_play} onClick={handleNavigate} data-route='/play'>
+            <button className={styles.menu_play} onClick={handleNavigate} data-route='/category'>
                 <img src={icons['play']}/>
             </button>
             <button className={styles.menu_instructions} onClick={handleNavigate} data-route='/instructions'>
