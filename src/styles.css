@@ -5,6 +5,11 @@
 
 :root{
     --font: 'mouse memoirs';
+    --closest: 100;
+    --closer: 75;
+    --close: 50;
+    --far: 25;
+    --farthest: 0
 }
 
 * {

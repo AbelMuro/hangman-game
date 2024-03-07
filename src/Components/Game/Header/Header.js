@@ -1,19 +1,20 @@
 import React from 'react';
 import PauseMenu from './PauseMenu';
+import HealthBar from './HealthBar';
 import styles from './styles.module.css';
 import icons from './icons';
 
-function Header() {
+function Header({category}) {
     return(
         <header className={styles.header}>
             <section className={styles.header_content}>
                 <PauseMenu/>
                 <h1 className={styles.header_title}>
-                    Countries
+                    {category}
                 </h1>
             </section>
             <section className={styles.header_content}>
-                <progress value='45' max='100'className={styles.header_health}></progress>
+                <HealthBar/>
                 <img className={styles.header_heart} src={icons['heart']}/>
             </section>
         </header>

@@ -1,0 +1,37 @@
+.healthBar{
+    padding: 9px 11px;
+    color: var(--Dark-Navy, #261676);
+    background-color: white;
+    width: 240px;
+    height: 31px;
+    border-radius: 96px;
+}
+
+.healthBar::-moz-progress-bar {
+    border-radius: 96px;
+    background-color: transparent;
+}
+
+.healthBar::-webkit-progress-bar{
+    background-color: transparent;
+}
+
+.healthBar::-webkit-progress-value {
+    border-radius: 96px;
+    background-color: var(--Dark-Navy, #261676);
+}
+
+@media(max-width: 860px){
+    .healthBar{
+        width: 160px;
+        height: 31px;
+    }
+}
+
+@media(max-width: 620px){
+    .healthBar{
+        width: 57px;
+        height: 16px;
+        padding: 4px;
+    }
+}

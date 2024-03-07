@@ -1,8 +1,9 @@
 import { createReducer, createAction } from "@reduxjs/toolkit";
 
-const initialState = {category: '', word: ''}
+const initialState = {category: '', word: '', health: 100}
 const updateCategory = createAction('UPDATE_CATEGORY');
 const updateWord = createAction('UPDATE_WORD')
+const updateHealth = createAction('UPDATE_HEALTH')
 
 
 const rootReducer = createReducer(initialState, (builder) => {
@@ -12,6 +13,9 @@ const rootReducer = createReducer(initialState, (builder) => {
         })
         .addCase(updateWord, (state, action) => {
             state.word = action.payload
+        })
+        .addCase(updateHealth, (state, action) => {
+            state.health -= action.payload;
         })
 })
 

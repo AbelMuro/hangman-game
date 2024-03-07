@@ -1,0 +1,31 @@
+.word{
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+
+
+.word_letter{
+    width: 112px;
+    height: 128px;
+    border-radius: 40px;
+    background: var(--Blue, #2463FF);
+    box-shadow: 0px -2px 0px 3px #140E66 inset, 0px 1px 0px 6px #3C74FF inset;
+}
+
+.word_letter:not(.word_letter[data-content=' ']){
+    color: var(--White, #FFF);    
+    text-align: center;
+    font-family: var(--font);
+    font-size: 5.5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%; /* 105.6px */
+}
+
+
+.word_letter[data-content=' ']{
+    opacity: 0.25;
+}
