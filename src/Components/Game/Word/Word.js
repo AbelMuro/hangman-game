@@ -4,6 +4,8 @@ import { useNavigate } from 'react-router-dom';
 import {useSelector, useDispatch} from 'react-redux';
 import styles from './styles.module.css';
 
+
+//was working on the mobile version of this component
 function Word({category}) {
     const dispatch = useDispatch();
     const [word, setWord] = useState('');
