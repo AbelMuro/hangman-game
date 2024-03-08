@@ -1,31 +1,85 @@
 .word{
+    width: 1240px;
     display: flex;
     justify-content: center;
-    gap: 16px;
+    column-gap: 144px;
+    row-gap: 16px;
     flex-wrap: wrap;
+    margin: 0px auto 120px auto;
 }
 
-
+.word_group{
+    display: flex;
+    min-width: 0;
+    gap: 16px;
+}
 
 .word_letter{
-    width: 112px;
-    height: 128px;
-    border-radius: 40px;
-    background: var(--Blue, #2463FF);
-    box-shadow: 0px -2px 0px 3px #140E66 inset, 0px 1px 0px 6px #3C74FF inset;
-}
-
-.word_letter:not(.word_letter[data-content=' ']){
     color: var(--White, #FFF);    
-    text-align: center;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-family: var(--font);
     font-size: 5.5rem;
     font-style: normal;
     font-weight: 400;
     line-height: 120%; /* 105.6px */
+    width: 112px;
+    height: 128px;
+    border-radius: 40px;
+    background: var(--Blue, #2463FF);
+    box-shadow: 0px -2px 0px 3px #140E66 inset, 0px 1px 0px 6px #3C74FF inset;    
 }
 
-
-.word_letter[data-content=' ']{
+.hidden_letter{
+    width: 112px;
+    height: 128px;
+    background: var(--Blue, #2463FF);
+    border-radius: 40px;
+    box-shadow: 0px -2px 0px 3px #140E66 inset, 0px 1px 0px 6px #3C74FF inset;    
     opacity: 0.25;
+}
+
+@media(max-width: 1280px) {
+    .word{
+        width: 90%;
+    }
+
+    .word_group, .word_letter, .hidden_letter{
+        flex-shrink: 1;
+    }
+}
+
+@media(max-width: 860px){
+    .word{
+        column-gap: 104px;
+        margin-bottom: 134px;
+    }
+    .word_group{
+        column-gap: 12px;
+        row-gap: 16px;
+    }
+    .word_letter{
+        width: 88px;
+        height: 112px;
+        font-size: 4rem;
+        border-radius: 32px;
+    }
+}
+
+@media(max-width: 620px){
+    .word{
+        margin-bottom: 118px;
+    }
+
+    .word_letter{
+        width: 40px;
+        height: 66px;
+        font-size: 2.5rem;
+        font-style: normal;
+        letter-spacing: 2px;
+        border-radius: 12px;
+        box-shadow: 0px 5px 0px 4px #3C74FF inset;;
+    }
 }
