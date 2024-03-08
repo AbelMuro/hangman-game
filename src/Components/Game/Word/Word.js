@@ -1,32 +1,10 @@
-import React, {useState, useEffect} from 'react';
-import Data from './Data';
-import { useNavigate } from 'react-router-dom';
-import {useSelector, useDispatch} from 'react-redux';
+import React from 'react';
+import {useSelector} from 'react-redux';
 import styles from './styles.module.css';
 
-
-//was working on the mobile version of this component
-function Word({category}) {
-    const dispatch = useDispatch();
-    const [word, setWord] = useState('');
-    const guess = useSelector(state => state.guess.guess)
-    const navigate = useNavigate();
-
-    useEffect(() => {
-        if(!category){
-            navigate('/');
-            return;
-        }
-        
-        let words = Data.categories[category] || [];
-        let random = Math.floor(Math.random() * words.length + 1);
-        setWord(words[random] && words[random].name);
-        console.log(words[random].name)
-
-        return () => dispatch({type: 'RESET_GUESS'})
-        
-    }, [category])
-
+function Word() {
+    const word = useSelector(state => state.word);
+    const guess = useSelector(state => state.guess)
 
     return(
         <section className={styles.word}>

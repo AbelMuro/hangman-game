@@ -60,7 +60,7 @@
         column-gap: 12px;
         row-gap: 16px;
     }
-    .word_letter{
+    .word_letter, .hidden_letter{
         width: 88px;
         height: 112px;
         font-size: 4rem;
@@ -80,6 +80,13 @@
         font-style: normal;
         letter-spacing: 2px;
         border-radius: 12px;
-        box-shadow: 0px 5px 0px 4px #3C74FF inset;;
+        box-shadow: 0px 5px 0px 4px #3C74FF inset;
+    }
+
+    .hidden_letter{
+        width: 40px;
+        height: 66px;
+        border-radius: 12px;
+        box-shadow: 0px 5px 0px 4px #3C74FF inset;
     }
 }

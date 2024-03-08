@@ -11,7 +11,7 @@ function Keyboard() {
     const handleKey = (e) => {
         if(!e.target.matches('button')) return;
         let letter = e.target.getAttribute('data-key');
-        dispatch({type: 'UPDATE_GUESS', payload: letter})
+        dispatch({type: 'UPDATE_GUESS', payload: letter});
         e.target.style.opacity = '0.25';
         e.target.style.pointerEvents = 'none';
     }
