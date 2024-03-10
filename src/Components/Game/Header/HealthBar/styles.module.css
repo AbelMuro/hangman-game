@@ -1,3 +1,18 @@
+.health{
+    width: 240px;
+    height: 31px;    
+    padding: 9px 11px;
+    color: var(--Dark-Navy, #261676);
+    background-color: white;
+    border-radius: 96px;
+}
+
+.health_bar{
+    height: 13px;
+    border-radius: 96px;
+    background-color: var(--Dark-Navy, #261676);
+}
+
 .healthBar{
     padding: 9px 11px;
     color: var(--Dark-Navy, #261676);
@@ -26,6 +41,10 @@
         width: 160px;
         height: 31px;
     }
+
+    .health{
+        width: 160px;
+    }
 }
 
 @media(max-width: 620px){
@@ -33,5 +52,15 @@
         width: 57px;
         height: 16px;
         padding: 4px;
+    }
+
+    .health{
+        width: 57px;
+        height: 16px;
+        padding: 4px;
+    }
+
+    .health_bar{
+        height: 8px;
     }
 }

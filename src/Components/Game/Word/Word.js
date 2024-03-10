@@ -11,7 +11,6 @@ function Word() {
 
     useEffect(() => {
         controls.start('show');
-
         return () => controls.stop();
     }, [word])
 

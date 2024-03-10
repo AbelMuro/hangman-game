@@ -157,6 +157,10 @@
         grid-column: 2/3;
     }
 
+    .instructions_title::before{
+        -webkit-text-stroke-width: 14px;
+    }
+
     .instructions_steps{
         display: grid;
         grid-template-columns: 60px 1fr;
@@ -221,9 +225,17 @@
     }
 
     .instructions_title{
+        background: linear-gradient(180deg, #67B6FF 16.42%, #FFF 40%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
         font-size: 3rem;
         justify-self: end;
     }
+
+    .instructions_title::before{
+        -webkit-text-stroke-width: 6px;
+    }    
 
     .instructions{
         gap: 24px;

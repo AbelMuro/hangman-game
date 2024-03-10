@@ -11,6 +11,8 @@ function Keyboard() {
 
     const handleKey = (e) => {
         if(!e.target.matches('button')) return;
+        window.scrollTo({top: 0, behavior: 'smooth'});
+
         let letter = e.target.getAttribute('data-key');
         dispatch({type: 'UPDATE_GUESS', payload: letter});
         e.target.style.opacity = '0.25';
@@ -26,6 +28,26 @@ function Keyboard() {
             key.style.pointerEvents = '';
         })
     }, [guess])
+
+    useEffect(() => {
+        let keydown = (e) => {
+            let keyPressed = e.key;
+
+            const allkeys = document.querySelectorAll('.' + styles.key);
+            Array.from(allkeys).some((key) => {
+                let currentKey = key.getAttribute('data-key');
+                if(currentKey === keyPressed){
+                    key.click();
+                    return true;
+                }
+                else 
+                    return false
+                    
+            })
+        }
+        window.addEventListener('keydown', keydown)
+        return () => window.removeEventListener('keydown', keydown)
+    }, [])
 
     return(
         <section className={styles.keys} onClick={handleKey}>
