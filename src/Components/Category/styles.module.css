@@ -15,6 +15,8 @@
     column-gap: 32px;
     row-gap: 50px;
     margin-bottom: 20px;
+    position: relative;
+    z-index: var(--close);          /* i need this for ::before to work property in .category_title*/
 }
 
 .category_back{
@@ -56,13 +58,14 @@
     line-height: 120%; /* 163.2px */
     letter-spacing: -0.68px;
     margin: 0px 0px 105px 0px;
+
 }
 
 .category_title::before{
-    content: 'Pick a category';
+    content: 'Pick a Category';
     position: absolute;
     z-index: -1;
-    -webkit-text-stroke-width: 12px;
+    -webkit-text-stroke-width: 16px;
     -webkit-text-stroke-color: #243041;
 }
 

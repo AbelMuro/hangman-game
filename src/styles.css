@@ -28,6 +28,18 @@ body{
     transition: none;
 }
 
+body::after{
+    position: absolute;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    content: 
+        url('/public/images/background-desktop.svg')
+        url('/public/images/background-tablet.svg')
+        url('/public/images/background-mobile.svg')
+
+}
+
 @media(max-width: 860px){
     body{
         background-image: url('/public/images/background-tablet.svg');
