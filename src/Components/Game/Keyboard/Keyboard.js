@@ -38,6 +38,7 @@ function Keyboard() {
                 let currentKey = key.getAttribute('data-key');
                 if(currentKey === keyPressed){
                     key.click();
+                    key.disabled = true;
                     return true;
                 }
                 else 
