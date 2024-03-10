@@ -20,9 +20,12 @@
     box-shadow: 0px -8px 0px 4px #140E66 inset, 0px 6px 0px 8px #2463FF inset; 
     position: relative;
     z-index: var(--close);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.result_title{
+.result_won, .result_lost{
     background: linear-gradient(180deg, #67B6FF 16.42%, #FFF 100%);
     background-clip: text;
     -webkit-background-clip: text;
@@ -41,10 +44,78 @@
     margin: auto
 }
 
-.result_title::before{
+.result_won::before{
     content: 'You Win';
-    -webkit-text-stroke-width: 12px;
+    -webkit-text-stroke-width: 16px;
     -webkit-text-stroke-color: #243041;
     position: absolute;
     z-index: -1;
+}
+
+.result_lost::before{
+    content: 'You Lose';
+    -webkit-text-stroke-width: 16px;
+    -webkit-text-stroke-color: #243041;
+    position: absolute;
+    z-index: -1;
+}
+
+.result_buttons{
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 34px;
+}
+
+.result_button{
+    cursor: pointer;
+    height: 62px;
+    border: none;
+    padding: 12px 64px;
+    border-radius: 40px;
+    color: var(--White, #FFF);
+    font-family: var(--font);
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%; /* 38.4px */
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+}
+
+li:not(li:last-child) > .result_button{
+    background: var(--Blue, #2463FF);
+    box-shadow: 0px -2px 0px 3px #140E66 inset, 0px 1px 0px 6px #3C74FF inset;
+}
+
+
+li:not(li:last-child) > .result_button:hover{
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.25) 100%), #2463FF;
+}
+
+
+li:last-child > .result_button{
+    background: var(--Pink-Gradient, linear-gradient(180deg, #FE71FE 16.42%, #7199FF 100%));
+    box-shadow: 0px -2px 0px 3px #140E66 inset, 0px 1px 0px 6px #C642FB inset ;
+}
+
+li:last-child > .result_button:hover{
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.25) 100%), linear-gradient(180deg, #FE71FE 16.42%, #7199FF 100%);
+}
+
+@media(max-width: 620px){
+    .result{
+        width: 324px;
+        border-radius: 48px;
+    }
+
+    .result_won, .result_lost{
+        font-size: 5.875rem;
+        letter-spacing: -0.47px;
+        top: -52px;
+    }
 }

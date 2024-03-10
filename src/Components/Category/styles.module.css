@@ -84,6 +84,7 @@
     line-height: 120%; /* 57.6px */
     letter-spacing: 2.4px;
     text-transform: uppercase;
+    transition: all 0.2s linear, opacity 0, transform 0;
 }
 
 .category_option:hover{
