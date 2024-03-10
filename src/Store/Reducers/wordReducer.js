@@ -18,7 +18,8 @@ const rootReducer = createReducer(initialState, (builder) => {
         })
         .addCase(updateGuess, (state, action) => {
             let letter = action.payload;
-            if(!state.word.includes(letter))
+            let word = state.word.toLowerCase();
+            if(!word.includes(letter))
                 state.health -= 10;
             
             state.guess += letter;

@@ -17,6 +17,7 @@ function Keyboard() {
         dispatch({type: 'UPDATE_GUESS', payload: letter});
         e.target.style.opacity = '0.25';
         e.target.style.pointerEvents = 'none';
+        e.target.disabled = true;
     }
 
     useEffect(() => {
@@ -26,6 +27,7 @@ function Keyboard() {
         allkeys.forEach((key) => {
             key.style.opacity = '';
             key.style.pointerEvents = '';
+            key.disabled = false;
         })
     }, [guess])
 
@@ -38,7 +40,6 @@ function Keyboard() {
                 let currentKey = key.getAttribute('data-key');
                 if(currentKey === keyPressed){
                     key.click();
-                    key.disabled = true;
                     return true;
                 }
                 else 
